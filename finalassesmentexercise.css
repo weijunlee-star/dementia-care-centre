@@ -1,0 +1,116 @@
+/* Reset & Base Styles */
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ line-height: 1.6;
+ background-color: #f4f8f6;
+ color: #2d3748;
+}
+
+/* Header & Navigation */
+header {
+ background-color: #0f766e;
+ color: #ffffff;
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+nav a {
+ color: #ffffff;
+ text-decoration: none;
+ margin-left: 1.5rem;
+ font-weight: 500;
+ transition: color 0.3s ease;
+}
+nav a:hover {
+ color: #99f6e4;
+}
+/* Hero Section */
+.hero {
+ background: linear-gradient(rgba(15, 118, 110, 0.85), rgba(15, 118, 110, 0.85));
+ color: white;
+ text-align: center;
+ padding: 4rem 1rem;
+}
+
+/* Container & Cards */
+.container {
+ max-width: 1000px;
+ margin: 2rem auto;
+ padding: 0 1rem;
+}
+
+.card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 1.5rem;
+ margin-top: 1rem;
+}
+
+.card {
+ background: #ffffff;
+ padding: 1.5rem;
+ border-radius: 8px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes Pulse Animation for Events */
+@keyframes highlightPulse {
+ 0% {
+ box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.6);
+ }
+ 70% {
+ box-shadow: 0 0 0 12px rgba(13, 148, 136, 0);
+ }
+ 100% {
+ box-shadow: 0 0 0 0 rgba(13, 148, 136, 0);
+ }
+}
+
+.event-banner {
+ background-color: #ffffff;
+ border-left: 5px solid #0d9488;
+ padding: 1.5rem;
+ border-radius: 8px;
+ margin-top: 1rem;
+ animation: highlightPulse 2.5s infinite;
+}
+
+.badge {
+ background-color: #e11d48;
+ color: white;
+ padding: 0.2rem 0.6rem;
+ font-size: 0.8rem;
+ border-radius: 4px;
+ text-transform: uppercase;
+ font-weight: bold;
+}
+
+/* Video Styling */
+.video-wrapper video {
+ width: 100%;
+ border-radius: 8px;
+ margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+ text-align: center;
+ padding: 1.5rem;
+ background-color: #0f766e;
+ color: white;
+ margin-top: 3rem;
+}
